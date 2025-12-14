@@ -1,0 +1,14 @@
+# Replace with your Neon connection string (from neon dashboard)
+DATABASE_URL=postgresql://neondb_owner:npg_hUWYQDwl70MZ@ep-rapid-mud-a1zkl2ls-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+
+# Secret key for JWT (change to a strong random string for production)
+SECRET_KEY=ajd78dhsjd8sdh7s8dh2378dsajd8e3737
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=43200  # 30 days, change as needed
+
+# Model path relative to backend folder
+MODEL_PATH=model/brain_tumor_model.h5
+
+# Upload directory
+UPLOAD_DIR=uploads

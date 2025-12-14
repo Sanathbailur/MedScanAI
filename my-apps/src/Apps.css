@@ -1,0 +1,592 @@
+/* ---------- General ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #333;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  backdrop-filter: blur(8px);
+  color: white;
+}
+
+.navbar .brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .links a,
+.navbar .links button {
+  margin-left: 20px;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-btn {
+  padding: 6px 14px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background: white;
+  color: black;
+}
+.colo{
+  color: red;
+}
+/* Moving text on upload page */
+.moving-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 40px;
+  margin-top: 70px;
+}
+
+.moving-text span {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 25px;
+  animation: slideText 5s linear infinite;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.highlight-red
+{
+  color: rgb(169, 61, 106);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  animation: float 6s ease-in-out infinite, fadeIn 2s ease-in;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero-btn,
+.login-btn {
+  padding: 12px 28px;
+  font-size: 18px;
+  border: 2px solid white;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover,
+.login-btn:hover {
+  background: white;
+  color: #4f46e5;
+}
+
+/* ---------- Moving Text ---------- */
+.animated-text {
+  margin: 40px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+.animated-text span {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: fadeText 12s infinite;
+}
+
+.animated-text span:nth-child(1) { animation-delay: 0s; }
+.animated-text span:nth-child(2) { animation-delay: 3s; }
+.animated-text span:nth-child(3) { animation-delay: 6s; }
+.animated-text span:nth-child(4) { animation-delay: 9s; }
+
+@keyframes fadeText {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  25% { opacity: 1; }
+  35% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; }
+}
+
+/* ---------- Features Section ---------- */
+.features {
+  text-align: center;
+  padding: 80px 40px;
+  background: #f9fafb;
+  color: #111;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #4f46e5;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Testimonials Section ---------- */
+.testimonials {
+  background: linear-gradient(120deg, #4f46e5, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  font-style: italic;
+}
+
+/* ---------- CTA Section ---------- */
+.cta-section {
+  text-align: center;
+  padding: 100px 40px;
+  background: #f3f4f6;
+}
+
+.cta-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4f46e5;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* ---------- Upload Page ---------- */
+
+
+/* ✅ GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ PAGE BACKGROUND */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #005bea, #00c6fb);
+  color: #fff;
+}
+
+/* ✅ NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 70px;
+  background: transparent;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.ai {
+  color: #4fc3f7;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffeb3b;
+}
+
+.signup-btn {
+  background: white;
+  color: #005bea;
+  border: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: #e3f2fd;
+}
+
+/* ✅ HERO SECTION */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+  padding: 0 20px;
+}
+
+.main-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #dfefff;
+  margin-bottom: 50px;
+}
+
+/* ✅ UPLOAD BOX */
+.upload-card {
+  background: #f8f9ff;
+  color: #333;
+  border-radius: 18px;
+  padding: 45px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.upload-card:hover {
+  transform: translateY(-4px);
+}
+
+.upload-icon {
+  width: 45px;
+  height: 45px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.drag-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.file-info {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* ✅ FILE INPUT */
+.file-upload-label {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.file-upload-label:hover {
+  background: #005bea;
+}
+
+.file-input {
+  display: none;
+}
+
+/* ✅ IMAGE PREVIEW */
+.preview-box {
+  margin-top: 20px;
+}
+
+.preview-box img {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #e0e7ff;
+}
+
+
+
+/* Sparkle overlay */
+.download-success-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1%, transparent 1%)
+    repeat;
+  background-size: 12px 12px;
+  animation: shimmer 2s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+
+
+
+/* ---------- Footer ---------- */
+.footer {
+  width: 100%;
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+}
+
+.footer .moving-text {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ---------- Login Page ---------- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  padding-top: 80px;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 20 10px 44px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+}
+
+.login-box h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #e5e5e5;
+  margin-bottom: 25px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-box input:focus {
+  border: 1px solid #4f46e5;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #4f46e5;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-text a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  width: 100%;
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+}
+
+.footer p {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.moving-text-bar {
+  
+  backdrop-filter: blur(8px);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+}
+
+.moving-text-bar span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 12s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
