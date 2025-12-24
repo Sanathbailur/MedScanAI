@@ -27,6 +27,6 @@ node_modules/
 dist/
 .env
 
+# Python cache
 __pycache__/
-venv/
-.env
+*.pyc
