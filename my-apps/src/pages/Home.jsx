@@ -14,14 +14,14 @@ export default function Home() {
           <p className="hero-desc">
             AI-powered health diagnostics for faster and accurate results.
           </p>
-          <div className="hero-cta">
+          {/* <div className="hero-cta">
             <Link to="/login" className="btn btn-primary big">
               Login
             </Link>
             <Link to="/login" className="btn btn-secondary big">
               Register
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="hero-right">

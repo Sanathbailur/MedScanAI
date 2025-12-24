@@ -1,11 +1,20 @@
+# fastapi
+# uvicorn
+# python-multipart
+# sqlalchemy
+# psycopg2-binary
+# passlib[bcrypt]
+# python-jose[cryptography]
+# python-dotenv
+# pillow
+# tensorflow
+# numpy
+
+
 fastapi
 uvicorn
-python-multipart
-sqlalchemy
-psycopg2-binary
-passlib[bcrypt]
-python-jose[cryptography]
-python-dotenv
-pillow
 tensorflow
 numpy
+pillow
+requests
+python-multipart

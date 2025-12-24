@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav className="nav-links">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/upload">Upload</NavLink>
-        <NavLink to="/login">Login</NavLink>
+        {/* <NavLink to="/login">Login</NavLink> */}
       </nav>
 
       <button
